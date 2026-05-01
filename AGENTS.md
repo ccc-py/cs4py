@@ -19,14 +19,18 @@ cs4py/
 │   ├── 演算法/
 │   │   ├── graph/        # 圖論（BFS/DFS/Dijkstra）
 │   │   └── sort/         # 排序（Merge Sort/Heap Sort）
-│   └── 計算理論/
-│       ├── automata/     # 自動機理論
-│       ├── regex/        # 正規語言
-│       ├── lambda_calculus/ # Lambda 演算
-│       ├── cellular/     # 細胞自動機
-│       ├── computability/ # 可計算性理論
-│       ├── grammar/      # 形式語言
-│       └── complexity/   # 計算複雜度
+│   ├── 計算理論/
+│   │   ├── automata/     # 自動機理論
+│   │   ├── regex/        # 正規語言
+│   │   ├── lambda_calculus/ # Lambda 演算
+│   │   ├── cellular/     # 細胞自動機
+│   │   ├── computability/ # 可計算性理論
+│   │   ├── grammar/      # 形式語言
+│   │   └── complexity/   # 計算複雜度
+│   └── 程式語言/
+│       ├── lisp/         # Lisp 解譯器
+│       ├── forth/        # FORTH 解譯器
+│       └── calc/         # 計算機語言
 └── wiki/                  # Wiki 文章
     ├── 人工智慧/
     ├── 演算法/
@@ -207,11 +211,19 @@ cs4py/
 - evolution/ - 演化計算（Genetic Algorithm 已完成）
 - agent/ - AI Agent
 
-### 第四階段：程式語言
-- lisp/ - Lisp 解譯器
-- forth/ - FORTH 解譯器
-- calc/ - 簡單語言
-- vm/ - 虛擬機器
+### 第四階段：程式語言（進行中）
+
+#### lisp/ (已完成)
+- [x] interpreter.py + interpreter.md
+
+#### forth/ (已完成)
+- [x] interpreter.py + interpreter.md
+
+#### calc/ (已完成)
+- [x] calculator.py + calculator.md
+
+#### vm/ (待實作)
+- [ ] simple_vm
 
 ## 開發指引
 
