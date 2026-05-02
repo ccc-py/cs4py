@@ -14,8 +14,9 @@ cs4py/
 │   ├── 人工智慧/
 │   │   ├── search/       # 搜尋演算法（A*, Simulated Annealing）
 │   │   ├── game/         # 遊戲 AI（Minimax, MCTS）
-│   │   ├── ml/           # 機器學習（Perceptron, K-Means, Decision Tree, KNN）
-│   │   └── evolution/    # 演化計算（Genetic Algorithm）
+│   │   ├── ml/           # 機器學習（Perceptron, K-Means, Decision Tree, KNN, MLP）
+│   │   ├── nn/           # 深度學習（CNN, RNN/LSTM）
+│   │   └── evolution/    # 演化計算（Genetic Algorithm, PSO）
 │   ├── 演算法/
 │   │   ├── graph/        # 圖論（BFS/DFS/Dijkstra）
 │   │   └── sort/         # 排序（Merge Sort/Heap Sort）
@@ -30,7 +31,8 @@ cs4py/
 │   └── 程式語言/
 │       ├── lisp/         # Lisp 解譯器
 │       ├── forth/        # FORTH 解譯器
-│       └── calc/         # 計算機語言
+│       ├── calc/         # 計算機語言
+│       └── vm/           # 簡單虛擬機器
 └── wiki/                  # Wiki 文章
     ├── 人工智慧/
     ├── 演算法/
@@ -114,68 +116,69 @@ cs4py/
 #### graph/ (部分完成)
 - [x] bfs_dfs.py + bfs_dfs.md
 - [x] dijkstra.py + dijkstra.md
-- [ ] shortest_path (Bellman-Ford, Floyd-Warshall)
-- [ ] mst (Prim, Kruskal)
+- [x] shortest_path.py + shortest_path.md (Bellman-Ford, Floyd-Warshall)
+- [x] mst.py + mst.md (Prim, Kruskal)
 
 #### sort/ (部分完成)
 - [x] merge_sort.py + merge_sort.md
 - [x] heap_sort.py + heap_sort.md
-- [ ] quick_sort
-- [ ] radix_sort
+- [x] quick_sort.py + quick_sort.md
+- [x] radix_sort.py + radix_sort.md
 
-#### dp/ (待實作)
-- [ ] knapsack
-- [ ] lcs
-- [ ] fibonacci
-- [ ] matrix_chain
+#### dp/ (已完成)
+- [x] knapsack
+- [x] lcs
+- [x] fibonacci
+- [x] matrix_chain
 
-#### method/ (待實作)
-- [ ] greedy
-- [ ] divide_conquer
-- [ ] backtracking
-- [ ] branch_and_bound
+#### method/ (已完成)
+- [x] greedy
+- [x] divide_conquer
+- [x] backtracking
+- [x] branch_and_bound
 
-#### string/ (待實作)
-- [ ] kmp
-- [ ] trie
-- [ ] rabin_karp
+#### string/ (已完成)
+- [x] kmp
+- [x] trie
+- [x] rabin_karp
 
-#### math/ (待實作)
-- [ ] gcd_lcm
-- [ ] prime_sieve
-- [ ] fft
+#### math/ (部分完成)
+- [x] gcd_lcm
+- [x] prime_sieve
+- [x] fft
 
 ### 人工智慧 - 程式碼 (code/人工智慧/)
 
 #### search/ (部分完成)
 - [x] a_star.py + a_star.md
-- [ ] bfs_dfs_ai
+- [x] bfs_dfs_ai.py + bfs_dfs_ai.md
 - [x] simulated_annealing.py + simulated_annealing.md
-- [ ] genetic_search
+- [x] genetic_search.py + genetic_search.md
 
 #### game/ (部分完成)
 - [x] minimax.py + minimax.md
 - [x] monte_carlo_tree_search.py + monte_carlo_tree_search.md
-- [ ] expectimax
+- [x] expectimax.py + expectimax.md
 
 #### ml/ (部分完成)
 - [x] perceptron.py + perceptron.md
 - [x] kmeans.py + kmeans.md
 - [x] decision_tree.py + decision_tree.md
 - [x] knn.py + knn.md
+- [x] mlp.py + mlp.md
 
-#### nn/ (待實作)
-- [ ] mlp
-- [ ] cnn
-- [ ] rnn
+#### nn/ (已完成)
+- [x] mlp (已在 ml/ 實作)
+- [x] cnn.py + cnn.md
+- [x] rnn.py + rnn.md
 
 #### evolution/ (部分完成)
 - [x] genetic_algorithm.py + genetic_algorithm.md
-- [ ] particle_swarm
+- [x] particle_swarm.py + particle_swarm.md
 
-#### agent/ (待實作)
-- [ ] reactive_agent
-- [ ] bdi_agent
+#### agent/ (部分完成)
+- [x] reactive_agent.py + reactive_agent.md
+- [x] bdi_agent
 
 ### 計算理論 - Wiki 文章 (wiki/計算理論/)
 
@@ -198,32 +201,24 @@ cs4py/
 ### 第二階段：演算法 (進行中)
 - graph/ - 圖論演算法（部分完成）
 - sort/ - 排序演算法（部分完成）
-- dp/ - 動態規劃
-- method/ - 演算法設計方法論
-- string/ - 字串演算法
-- math/ - 數論演算法
+- dp/ - 動態規劃（已完成）
+- method/ - 演算法設計方法論（部分完成）
+- string/ - 字串演算法（已完成）
+- math/ - 數論演算法（部分完成）
 
 ### 第三階段：人工智慧 (進行中)
-- search/ - 搜尋演算法（A*, Simulated Annealing 已完成）
-- game/ - 遊戲 AI（Minimax, MCTS 已完成）
-- ml/ - 機器學習（Perceptron, K-Means, Decision Tree, KNN 已完成）
-- nn/ - 深度學習 / 神經網路
-- evolution/ - 演化計算（Genetic Algorithm 已完成）
-- agent/ - AI Agent
+- search/ - 搜尋演算法（已完成）
+- game/ - 遊戲 AI（已完成）
+- ml/ - 機器學習（已完成）
+- nn/ - 深度學習 / 神經網路（已完成）
+- evolution/ - 演化計算（已完成）
+- agent/ - AI Agent（部分完成）
 
 ### 第四階段：程式語言（進行中）
-
-#### lisp/ (已完成)
-- [x] interpreter.py + interpreter.md
-
-#### forth/ (已完成)
-- [x] interpreter.py + interpreter.md
-
-#### calc/ (已完成)
-- [x] calculator.py + calculator.md
-
-#### vm/ (待實作)
-- [ ] simple_vm
+- lisp/ - Lisp 解譯器（已完成）
+- forth/ - FORTH 解譯器（已完成）
+- calc/ - 計算機語言（已完成）
+- vm/ - 簡單虛擬機器（已完成）
 
 ## 開發指引
 
