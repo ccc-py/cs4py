@@ -9,17 +9,22 @@
 ```
 cs4py/
 ├── AGENTS.md
-├── _doc/                  # 計畫文件
+├── _doc/                  # 計畫文件（v1.0.md, v2.0.md）
 ├── code/                  # 程式碼
 │   ├── 人工智慧/
-│   │   ├── search/       # 搜尋演算法（A*, Simulated Annealing）
-│   │   ├── game/         # 遊戲 AI（Minimax, MCTS）
-│   │   ├── ml/           # 機器學習（Perceptron, K-Means, Decision Tree, KNN, MLP）
-│   │   ├── nn/           # 深度學習（CNN, RNN/LSTM）
-│   │   └── evolution/    # 演化計算（Genetic Algorithm, PSO）
+│   │   ├── search/       # 搜尋演算法
+│   │   ├── game/         # 遊戲 AI
+│   │   ├── ml/           # 機器學習
+│   │   ├── nn/           # 深度學習
+│   │   ├── evolution/    # 演化計算
+│   │   └── agent/        # AI Agent
 │   ├── 演算法/
-│   │   ├── graph/        # 圖論（BFS/DFS/Dijkstra）
-│   │   └── sort/         # 排序（Merge Sort/Heap Sort）
+│   │   ├── graph/        # 圖論演算法
+│   │   ├── sort/         # 排序演算法
+│   │   ├── dp/           # 動態規劃
+│   │   ├── method/       # 演算法設計方法論
+│   │   ├── string/       # 字串演算法
+│   │   └── math/         # 數論演算法
 │   ├── 計算理論/
 │   │   ├── automata/     # 自動機理論
 │   │   ├── regex/        # 正規語言
@@ -28,16 +33,23 @@ cs4py/
 │   │   ├── computability/ # 可計算性理論
 │   │   ├── grammar/      # 形式語言
 │   │   └── complexity/   # 計算複雜度
+│   ├── 密碼學/
+│   │   ├── classical/    # 古典密碼
+│   │   ├── modern/       # 現代密碼
+│   │   ├── hash/         # 雜湊函數
+│   │   └── signature/    # 數位簽章
+│   ├── 資料結構/
+│   │   ├── linked_list/  # 鏈結串列
+│   │   ├── tree/         # 樹結構
+│   │   ├── hash_table/   # 雜湊表
+│   │   ├── heap/         # 堆積
+│   │   └── union_find/   # 並查集
 │   └── 程式語言/
 │       ├── lisp/         # Lisp 解譯器
 │       ├── forth/        # FORTH 解譯器
 │       ├── calc/         # 計算機語言
 │       └── vm/           # 簡單虛擬機器
 └── wiki/                  # Wiki 文章
-    ├── 人工智慧/
-    ├── 演算法/
-    ├── 程式語言/
-    └── 計算理論/
 ```
 
 ## 實作原則
@@ -70,38 +82,38 @@ cs4py/
 
 ## 實作進度追蹤
 
-### 計算理論 - 程式碼 (code/計算理論/)
+### 計算理論 - 程式碼 (code/計算理論/) — 已完成
 
-#### automata/ (已完成)
+#### automata/
 - [x] dfa.py + dfa.md
 - [x] nfa.py + nfa.md
 - [x] nfa_to_dfa.py + nfa_to_dfa.md
 - [x] pda.py + pda.md
 - [x] turing.py + turing.md
 
-#### regex/ (已完成)
+#### regex/
 - [x] engine.py + engine.md
 - [x] nfa_builder.py + nfa_builder.md
 
-#### lambda_calculus/ (已完成)
+#### lambda_calculus/
 - [x] parser.py + parser.md
 - [x] reducer.py + reducer.md
 - [x] encoder.py + encoder.md
 
-#### cellular/ (已完成)
+#### cellular/
 - [x] game_of_life.py + game_of_life.md
 - [x] rule30.py + rule30.md
 
-#### computability/ (已完成)
+#### computability/
 - [x] halting.py + halting.md
 - [x] busy_beaver.py + busy_beaver.md
 - [x] godel_number.py + godel_number.md
 
-#### grammar/ (已完成)
+#### grammar/
 - [x] cfg.py + cfg.md
 - [x] cyk.py + cyk.md
 
-#### complexity/ (已完成)
+#### complexity/
 - [x] sat.py + sat.md
 - [x] tsp.py + tsp.md
 - [x] knapsack_nphard.py + knapsack_nphard.md
@@ -111,74 +123,154 @@ cs4py/
 - [x] np_complete.py + np_complete.md
 - [x] reduction.py + reduction.md
 
-### 演算法 - 程式碼 (code/演算法/)
+### 演算法 - 程式碼 (code/演算法/) — 已完成
 
-#### graph/ (部分完成)
+#### graph/
 - [x] bfs_dfs.py + bfs_dfs.md
 - [x] dijkstra.py + dijkstra.md
-- [x] shortest_path.py + shortest_path.md (Bellman-Ford, Floyd-Warshall)
-- [x] mst.py + mst.md (Prim, Kruskal)
+- [x] shortest_path.py + shortest_path.md
+- [x] mst.py + mst.md
+- [x] articulation.py + articulation.md
+- [x] bipartite_matching.py + bipartite_matching.md
+- [x] topological_sort.py + topological_sort.md
+- [x] strongly_connected.py + strongly_connected.md
+- [x] max_flow.py + max_flow.md
+- [x] eulerian.py + eulerian.md
 
-#### sort/ (部分完成)
+#### sort/
 - [x] merge_sort.py + merge_sort.md
 - [x] heap_sort.py + heap_sort.md
 - [x] quick_sort.py + quick_sort.md
 - [x] radix_sort.py + radix_sort.md
+- [x] selection_sort.py + selection_sort.md
+- [x] bucket_sort.py + bucket_sort.md
+- [x] shell_sort.py + shell_sort.md
+- [x] insertion_sort.py + insertion_sort.md
+- [x] counting_sort.py + counting_sort.md
 
-#### dp/ (已完成)
+#### dp/
 - [x] knapsack
 - [x] lcs
 - [x] fibonacci
 - [x] matrix_chain
+- [x] subset_sum
+- [x] optimal_bst
+- [x] edit_distance
+- [x] lis
+- [x] coin_change
 
-#### method/ (已完成)
+#### method/
 - [x] greedy
 - [x] divide_conquer
 - [x] backtracking
 - [x] branch_and_bound
 
-#### string/ (已完成)
+#### string/
 - [x] kmp
 - [x] trie
 - [x] rabin_karp
 
-#### math/ (部分完成)
+#### math/
 - [x] gcd_lcm
 - [x] prime_sieve
 - [x] fft
+- [x] discrete_log
+- [x] modular_exponentiation
+- [x] miller_rabin
+- [x] chinese_remainder
 
-### 人工智慧 - 程式碼 (code/人工智慧/)
+### 人工智慧 - 程式碼 (code/人工智慧/) — 已完成
 
-#### search/ (部分完成)
+#### search/
 - [x] a_star.py + a_star.md
 - [x] bfs_dfs_ai.py + bfs_dfs_ai.md
 - [x] simulated_annealing.py + simulated_annealing.md
 - [x] genetic_search.py + genetic_search.md
 
-#### game/ (部分完成)
+#### game/
 - [x] minimax.py + minimax.md
 - [x] monte_carlo_tree_search.py + monte_carlo_tree_search.md
 - [x] expectimax.py + expectimax.md
 
-#### ml/ (部分完成)
+#### ml/
 - [x] perceptron.py + perceptron.md
 - [x] kmeans.py + kmeans.md
 - [x] decision_tree.py + decision_tree.md
 - [x] knn.py + knn.md
 - [x] mlp.py + mlp.md
+- [x] naive_bayes.py + naive_bayes.md
+- [x] linear_regression.py + linear_regression.md
+- [x] pca.py + pca.md
 
-#### nn/ (已完成)
-- [x] mlp (已在 ml/ 實作)
+#### nn/
 - [x] cnn.py + cnn.md
 - [x] rnn.py + rnn.md
 
-#### evolution/ (部分完成)
+#### evolution/
 - [x] genetic_algorithm.py + genetic_algorithm.md
 - [x] particle_swarm.py + particle_swarm.md
 
-#### agent/ (部分完成)
+#### agent/
 - [x] reactive_agent.py + reactive_agent.md
-- [x] bdi_agent
+- [x] q_learning.py + q_learning.md
+- [x] sarsa.py + sarsa.md
+- [x] bdi_agent.py + bdi_agent.md
+
+### 密碼學 - 程式碼 (code/密碼學/) — 已完成
+
+#### classical/
+- [x] caesar.py + caesar.md
+- [x] vigenere.py + vigenere.md
+- [x] frequency.py + frequency.md
+- [x] enigma.py + enigma.md
+
+#### modern/
+- [x] rsa.py + rsa.md
+- [x] diffie_hellman.py + diffie_hellman.md
+- [x] elgamal.py + elgamal.md
+
+#### hash/
+- [x] sha256.py + sha256.md
+- [x] md5.py + md5.md
+
+#### signature/
+- [x] digital_signature.py + digital_signature.md
+
+### 資料結構 - 程式碼 (code/資料結構/) — 已完成
+
+#### linked_list/
+- [x] singly.py + singly.md
+- [x] doubly.py + doubly.md
+
+#### tree/
+- [x] binary_tree.py + binary_tree.md
+- [x] bst.py + binary_search_tree.md
+- [x] avl.py + avl.md
+- [x] red_black.py + red_black.md
+
+#### hash_table/
+- [x] chaining.py + chaining.md
+- [x] open_addressing.py + open_addressing.md
+
+#### heap/
+- [x] binary_heap.py + binary_heap.md
+
+#### union_find/
+- [x] uf.py + uf.md
+
+### 程式語言 - 程式碼 (code/程式語言/) — 已完成
+
+#### lisp/
+- [x] interpreter.py + interpreter.md
+
+#### forth/
+- [x] interpreter.py + interpreter.md
+
+#### calc/
+- [x] calculator.py + calculator.md
+
+#### vm/
+- [x] simple_vm.py + simple_vm.md
 
 ### 計算理論 - Wiki 文章 (wiki/計算理論/)
 
@@ -189,36 +281,21 @@ cs4py/
 
 ## 開發順序
 
-### 第一階段：計算理論 (已完成)
-1. automata/ - 自動機理論 ✓
-2. regex/ - 正規語言 ✓
-3. lambda_calculus/ - Lambda 演算 ✓
-4. cellular/ - 細胞自動機 ✓
-5. computability/ - 可計算性理論 ✓
-6. grammar/ - 形式語言 ✓
-7. complexity/ - 計算複雜度 ✓
+### 第一階段：計算理論 (已完成) ✓
 
-### 第二階段：演算法 (進行中)
-- graph/ - 圖論演算法（部分完成）
-- sort/ - 排序演算法（部分完成）
-- dp/ - 動態規劃（已完成）
-- method/ - 演算法設計方法論（部分完成）
-- string/ - 字串演算法（已完成）
-- math/ - 數論演算法（部分完成）
+### 第二階段：演算法 (已完成) ✓
+- graph/、sort/、dp/、method/、string/、math/
 
-### 第三階段：人工智慧 (進行中)
-- search/ - 搜尋演算法（已完成）
-- game/ - 遊戲 AI（已完成）
-- ml/ - 機器學習（已完成）
-- nn/ - 深度學習 / 神經網路（已完成）
-- evolution/ - 演化計算（已完成）
-- agent/ - AI Agent（部分完成）
+### 第三階段：人工智慧 (已完成) ✓
+- search/、game/、ml/、nn/、evolution/、agent/
 
-### 第四階段：程式語言（進行中）
-- lisp/ - Lisp 解譯器（已完成）
-- forth/ - FORTH 解譯器（已完成）
-- calc/ - 計算機語言（已完成）
-- vm/ - 簡單虛擬機器（已完成）
+### 第四階段：程式語言 (已完成) ✓
+
+### 第五階段：密碼學 (v2.0) (已完成) ✓
+- classical/ → modern/ → hash/ → signature/
+
+### 第六階段：資料結構 (v2.0) (已完成) ✓
+- linked_list/ → tree/ → hash_table/ → heap/ → union_find/
 
 ## 開發指引
 
