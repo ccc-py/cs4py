@@ -19,14 +19,19 @@ cs4py/
 │   │   ├── evolution/    # 演化計算
 │   │   ├── agent/        # AI Agent
 │   │   ├── recommendation/ # 推薦系統
-│   │   └── nlp/          # 自然語言處理
+│   │   ├── nlp/          # 自然語言處理
+│   │   ├── reinforcement/ # 強化學習
+│   │   └── generative/   # 生成模型
 │   ├── 演算法/
 │   │   ├── graph/        # 圖論演算法
 │   │   ├── sort/         # 排序演算法
 │   │   ├── dp/           # 動態規劃
 │   │   ├── method/       # 演算法設計方法論
 │   │   ├── string/       # 字串演算法
-│   │   └── math/         # 數論演算法
+│   │   ├── math/         # 數論演算法
+│   │   ├── approximation/ # 近似演算法
+│   │   ├── advanced/     # 進階資料結構
+│   │   └── flow/         # 網路流演算法
 │   ├── 計算理論/
 │   │   ├── automata/     # 自動機理論
 │   │   ├── regex/        # 正規語言
@@ -46,30 +51,74 @@ cs4py/
 │   │   ├── hash_table/   # 雜湊表
 │   │   ├── heap/         # 堆積
 │   │   └── union_find/   # 並查集
-│   └── 程式語言/
-│       ├── lisp/         # Lisp 解譯器
-│       ├── forth/        # FORTH 解譯器
-│       ├── calc/         # 計算機語言
-│       └── vm/           # 簡單虛擬機器
-├── 資料壓縮/
-│   ├── entropy/      # 熵編碼
-│   ├── dictionary/   # 字典式壓縮
-│   ├── transform/    # 轉換編碼
-│   └── image/        # 圖片壓縮
-├── 數值方法/
-│   ├── root_finding/    # 求根方法
-│   ├── linear/         # 線性代數方法
-│   ├── integration/    # 數值積分
-│   ├── interpolation/  # 插值方法
-│   └── ode/           # 常微分方程
-├── 計算幾何/
-│   ├── basic/         # 基礎點線運算
-│   ├── convex_hull/   # 凸包算法
-│   ├── closest_pair/  # 最近點對
-│   ├── polygon/       # 多邊形操作
-│   ├── sweep_line/    # 掃描線算法
-│   └── triangulation/ # 三角化
-└── wiki/                  # Wiki 文章
+│   ├── 程式語言/
+│   │   ├── lisp/         # Lisp 解譯器
+│   │   ├── forth/        # FORTH 解譯器
+│   │   ├── calc/         # 計算機語言
+│   │   └── vm/           # 簡單虛擬機器
+│   ├── 資料壓縮/
+│   │   ├── entropy/      # 熵編碼
+│   │   ├── dictionary/   # 字典式壓縮
+│   │   ├── transform/    # 轉換編碼
+│   │   └── image/        # 圖片壓縮
+│   ├── 數值方法/
+│   │   ├── root_finding/    # 求根方法
+│   │   ├── linear/         # 線性代數方法
+│   │   ├── integration/    # 數值積分
+│   │   ├── interpolation/  # 插值方法
+│   │   ├── ode/           # 常微分方程
+│   │   └── advanced/      # 進階數值方法
+│   ├── 計算幾何/
+│   │   ├── basic/         # 基礎點線運算
+│   │   ├── convex_hull/   # 凸包算法
+│   │   ├── closest_pair/  # 最近點對
+│   │   ├── polygon/       # 多邊形操作
+│   │   ├── sweep_line/    # 掃描線算法
+│   │   └── triangulation/ # 三角化
+│   ├── 資訊檢索/
+│   │   ├── indexing/     # 索引結構
+│   │   ├── ranking/      # 排序演算法
+│   │   ├── model/        # 檢索模型
+│   │   ├── evaluation/   # 評估指標
+│   │   └── text/         # 文字處理
+│   ├── 機率演算法/
+│   │   ├── monte_carlo/   # 蒙特卡羅方法
+│   │   ├── randomized/    # 隨機化演算法
+│   │   ├── probabilistic_ds/ # 機率資料結構
+│   │   └── markov/        # 馬可夫鏈
+│   ├── 電腦圖學/
+│   │   ├── raster/        # 光柵化演算法
+│   │   ├── transform/    # 幾何變換
+│   │   ├── render/        # 渲染演算法
+│   │   ├── clip/          # 裁剪演算法
+│   │   └── color/         # 色彩空間
+│   ├── 區塊鏈/
+│   │   ├── core/          # 核心結構
+│   │   ├── consensus/     # 共識演算法
+│   │   ├── smart_contract/ # 智能合約
+│   │   └── wallet/        # 錢包
+│   ├── 量子計算/
+│   │   ├── gates/         # 量子閘與電路
+│   │   ├── algorithms/    # 量子演算法
+│   │   └── concepts/      # 量子概念
+│   ├── 資訊理論/
+│   │   ├── entropy/       # 熵計算
+│   │   ├── channel/       # 通道模型
+│   │   ├── coding/        # 通道編碼
+│   │   └── source/        # 信源編碼理論
+│   ├── 分散式演算法/
+│   │   ├── election/      # 領導者選舉
+│   │   ├── consensus/     # 共識協定
+│   │   ├── clock/         # 邏輯時鐘
+│   │   ├── snapshot/      # 快照演算法
+│   │   └── gossip/        # 流行病協定
+│   └── 形式方法/
+│       ├── model_checking/ # 模型檢查
+│       ├── theorem/        # 定理證明
+│       ├── symbolic/       # 符號執行
+│       ├── abstract/       # 抽象解釋
+│       └── contract/       # 契約式設計
+├── wiki/                  # Wiki 文章
 ```
 
 ## 實作原則
@@ -215,6 +264,11 @@ cs4py/
 - [x] splay_tree.py + splay_tree.md
 - [x] suffix_tree.py + suffix_tree.md
 
+#### flow/ (v4.0)
+- [x] push_relabel.py + push_relabel.md — 前置推送-重標號最大流演算法
+- [x] hungarian.py + hungarian.md — 匈牙利演算法（指派問題）
+- [x] min_mean_cycle.py + min_mean_cycle.md — 最小均值環演算法
+
 ### 人工智慧 - 程式碼 (code/人工智慧/) — 已完成
 
 #### search/
@@ -267,6 +321,18 @@ cs4py/
 - [x] naive_bayes_text.py + naive_bayes_text.md
 - [x] ngram.py + ngram.md
 - [x] viterbi.py + viterbi.md
+
+#### reinforcement/ (v4.0)
+- [x] policy_gradient.py + policy_gradient.md — 策略梯度法（REINFORCE）
+- [x] actor_critic.py + actor_critic.md — Actor-Critic 演算法
+- [x] dqn.py + dqn.md — 深度 Q 網路
+- [x] ddpg.py + ddpg.md — 深度確定性策略梯度
+
+#### generative/ (v4.0)
+- [x] autoencoder.py + autoencoder.md — 自編碼器
+- [x] vae.py + vae.md — 變分自編碼器
+- [x] gan.py + gan.md — 生成對抗網路
+- [x] diffusion.py + diffusion.md — 擴散模型
 
 ### 密碼學 - 程式碼 (code/密碼學/) — 已完成
 
@@ -324,7 +390,7 @@ cs4py/
 #### vm/
 - [x] simple_vm.py + simple_vm.md
 
-### 數值方法 - 程式碼 (code/數值方法/) — 已完成 (v3.0)
+### 數值方法 - 程式碼 (code/數值方法/) — 已完成
 
 #### root_finding/
 - [x] bisection.py + bisection.md
@@ -348,6 +414,11 @@ cs4py/
 #### ode/
 - [x] euler.py + euler.md
 - [x] runge_kutta.py + runge_kutta.md
+
+#### advanced/ (v4.0)
+- [x] finite_difference.py + finite_difference.md — 有限差分法（前向/後向/中央差分、熱傳導方程）
+- [x] finite_element.py + finite_element.md — 有限元素法（一維 Galerkin 方法、Poisson 方程）
+- [x] fft_advanced.py + fft_advanced.md — FFT 進階應用（摺積、多項式乘法）
 
 ### 計算幾何 - 程式碼 (code/計算幾何/) — 已完成 (v3.0)
 
@@ -396,68 +467,6 @@ cs4py/
 #### text/
 - [x] tokenizer.py + tokenizer.md
 
-### 計算理論 - Wiki 文章 (wiki/計算理論/)
-
-- [x] 哥德爾不完備定理.md
-- [x] 歸約.md
-- [x] np完全.md
-- [x] p與np.md
-
-## 開發順序
-
-### 第一階段：計算理論 (已完成) ✓
-
-### 第二階段：演算法 (已完成) ✓
-- graph/、sort/、dp/、method/、string/、math/
-- 擴充：graph/ (min_cost_flow, matching, planar, graph_coloring)、approximation/、advanced/
-
-### 第三階段：人工智慧 (已完成) ✓
-- search/、game/、ml/、nn/、evolution/、agent/
-- 擴充：recommendation/、nlp/
-
-### 第四階段：程式語言 (已完成) ✓
-
-### 第五階段：密碼學 (v2.0) (已完成) ✓
-- classical/ → modern/ → hash/ → signature/
-
-### 第六階段：資料結構 (v2.0) (已完成) ✓
-- linked_list/ → tree/ → hash_table/ → heap/ → union_find/
-
-### 第七階段：資料壓縮 (v3.0) (已完成) ✓
-- entropy/ → dictionary/ → transform/ → image/
-
-### 第八階段：數值方法 (v3.0) (已完成) ✓
-- root_finding/ → linear/ → integration/ → interpolation/ → ode/
-
-### 第九階段：計算幾何 (v3.0) (已完成) ✓
-- basic/ → convex_hull/ → closest_pair/ → polygon/ → sweep_line/ → triangulation/
-
-### 第十階段：資訊檢索 (v3.0) (已完成) ✓
-- indexing/ → ranking/ → model/ → evaluation/ → text/
-
-### 第十一階段：機率演算法 (v3.0) (已完成) ✓
-- monte_carlo/ → randomized/ → probabilistic_ds/ → markov/
-
-## 資料壓縮 - 程式碼 (code/資料壓縮/) — 已完成 (v3.0)
-
-### entropy/
-- [x] huffman.py + huffman.md
-- [x] shannon_fano.py + shannon_fano.md
-- [x] arithmetic_coding.py + arithmetic_coding.md
-
-### dictionary/
-- [x] lz77.py + lz77.md
-- [x] lzw.py + lzw.md
-- [x] lz78.py + lz78.md
-
-### transform/
-- [x] run_length.py + run_length.md
-- [x] burrows_wheeler.py + burrows_wheeler.md
-- [x] move_to_front.py + move_to_front.md
-
-### image/
-- [x] dct.py + dct.md
-
 ### 機率演算法 - 程式碼 (code/機率演算法/) — 已完成 (v3.0)
 
 #### monte_carlo/
@@ -479,6 +488,235 @@ cs4py/
 - [x] markov_chain.py + markov_chain.md
 - [x] mcmc.py + mcmc.md
 
+### 計算理論 - Wiki 文章 (wiki/計算理論/)
+
+- [x] 哥德爾不完備定理.md
+- [x] 歸約.md
+- [x] np完全.md
+- [x] p與np.md
+
+### 電腦圖學 - 程式碼 (code/電腦圖學/) — 已完成 (v4.0)
+
+#### raster/ — 光柵化演算法
+- [x] bresenham.py + bresenham.md — 布雷森漢姆直線演算法
+- [x] midpoint_circle.py + midpoint_circle.md — 中點畫圓演算法
+- [x] polygon_fill.py + polygon_fill.md — 掃描線多邊形填充
+- [x] line_aa.py + line_aa.md — Xiaolin Wu 反鋸齒直線
+
+#### transform/ — 幾何變換
+- [x] transform2d.py + transform2d.md — 2D 幾何變換（平移、旋轉、縮放）
+- [x] transform3d.py + transform3d.md — 3D 變換與投影（正交/透視）
+
+#### render/ — 渲染演算法
+- [x] ray_tracing.py + ray_tracing.md — 基礎光線追蹤（光線-球體相交、反射、漫射）
+- [x] z_buffer.py + z_buffer.md — Z-Buffer 隱面消除
+
+#### clip/ — 裁剪演算法
+- [x] cohen_sutherland.py + cohen_sutherland.md — Cohen-Sutherland 直線裁剪
+- [x] sutherland_hodgman.py + sutherland_hodgman.md — Sutherland-Hodgman 多邊形裁剪
+
+#### color/ — 色彩空間
+- [x] color_space.py + color_space.md — RGB/HSL/HSV 轉換與色彩操作
+
+### 區塊鏈 - 程式碼 (code/區塊鏈/) — 已完成 (v4.0)
+
+#### core/ — 核心結構
+- [x] block.py + block.md — 區塊與區塊鏈結構
+- [x] merkle_tree.py + merkle_tree.md — Merkle Tree 默克爾樹
+- [x] proof_of_work.py + proof_of_work.md — 工作量證明 PoW
+
+#### consensus/ — 共識演算法
+- [x] proof_of_stake.py + proof_of_stake.md — 權益證明 PoS
+- [x] pbft.py + pbft.md — 實用拜占庭容錯
+- [x] raft.py + raft.md — Raft 共識演算法
+- [x] paxos.py + paxos.md — Paxos 共識演算法
+
+#### smart_contract/ — 智能合約
+- [x] evm_simple.py + evm_simple.md — 簡化版 EVM 虛擬機
+
+#### wallet/ — 錢包
+- [x] address.py + address.md — 錢包地址生成
+- [x] transaction.py + transaction.md — 交易結構（UTXO 模型）
+- [x] signature_verify.py + signature_verify.md — ECDSA 簽章驗證
+
+### 量子計算 - 程式碼 (code/量子計算/) — 已完成 (v4.0)
+
+#### gates/ — 量子閘與電路
+- [x] quantum_gates.py + quantum_gates.md — 基本量子閘 (H, X, Y, Z, CNOT, T, S) 與矩陣表示
+- [x] circuit.py + circuit.md — 量子電路模擬器（閘序列組合、狀態演化、測量）
+
+#### algorithms/ — 量子演算法
+- [x] deutsch.py + deutsch.md — Deutsch 演算法（首個展現量子優勢的演算法）
+- [x] grover.py + grover.md — Grover 搜尋演算法（O(√n) 非結構化搜尋）
+- [x] shor.py + shor.md — Shor 因數分解演算法（量子傅立葉變換、指數加速）
+- [x] quantum_teleportation.py + quantum_teleportation.md — 量子隱形傳態協定
+- [x] bernstein_vazirani.py + bernstein_vazirani.md — Bernstein-Vazirani 演算法（單次查詢找隱藏字串）
+- [x] simon.py + simon.md — Simon 演算法（指數加速前驅、週期尋找）
+
+#### concepts/ — 量子概念
+- [x] bell_state.py + bell_state.md — Bell 態（最大糾纏對、CHSH 不等式）
+- [x] density_matrix.py + density_matrix.md — 密度矩陣（純態 vs 混合態、部分跡）
+
+### 資訊理論 - 程式碼 (code/資訊理論/) — 已完成 (v4.0)
+
+#### entropy/ — 熵計算
+- [x] entropy.py + entropy.md — 香農熵、聯合熵、條件熵
+- [x] mutual_info.py + mutual_info.md — 互資訊、KL 散度、交叉熵
+
+#### channel/ — 通道模型
+- [x] channel_capacity.py + channel_capacity.md — 通道容量、香農第二定理、DMC 容量
+- [x] binary_channel.py + binary_channel.md — BSC、BEC 模擬與錯誤分析
+
+#### coding/ — 通道編碼
+- [x] hamming_code.py + hamming_code.md — 海明碼 (7,4)、錯誤修正
+- [x] reed_solomon.py + reed_solomon.md — 里德-所羅門碼、GF(256) 算術
+- [x] crc.py + crc.md — CRC-8、CRC-16、CRC-32 多項式檢查
+
+#### source/ — 信源編碼理論
+- [x] channel_coding_theorem.py + channel_coding_theorem.md — 通道編碼定理示範、Shannon 極限
+- [x] rate_distortion.py + rate_distortion.md — 率失真函數、Blahut-Arimoto 演算法
+
+### 分散式演算法 - 程式碼 (code/分散式演算法/) — 已完成 (v4.0)
+
+#### election/ — 領導者選舉
+- [x] bully.py + bully.md — Bully 演算法（霸道演算法）、優先權選舉
+- [x] ring.py + ring.md — 環狀選舉演算法、令牌傳遞
+
+#### consensus/ — 共識協定
+- [x] two_phase_commit.py + two_phase_commit.md — 兩階段提交 (2PC)
+- [x] three_phase_commit.py + three_phase_commit.md — 三階段提交 (3PC)
+
+#### clock/ — 邏輯時鐘
+- [x] lamport_clock.py + lamport_clock.md — Lamport 邏輯時鐘、happens-before 關係
+- [x] vector_clock.py + vector_clock.md — 向量時鐘、因果順序、衝突檢測
+
+#### snapshot/ — 快照演算法
+- [x] chandy_lamport.py + chandy_lamport.md — Chandy-Lamport 快照演算法
+
+#### gossip/ — 流行病協定
+- [x] gossip_protocol.py + gossip_protocol.md — Gossip 協定、資訊傳播
+- [x] anti_entropy.py + anti_entropy.md — 反熵同步、Push-Pull 策略
+
+### 形式方法 - 程式碼 (code/形式方法/) — 已完成 (v4.0)
+
+#### model_checking/ — 模型檢查
+- [x] kripke.py + kripke.md — Kripke 結構（時序邏輯模型）
+- [x] ctl.py + ctl.md — CTL 計算樹邏輯（分支時序邏輯）
+- [x] ltl.py + ltl.md — LTL 線性時序邏輯
+
+#### theorem/ — 定理證明
+- [x] resolution.py + resolution.md — 一階邏輯歸結原理
+- [x] tableau.py + tableau.md — 語意表決演算法
+
+#### symbolic/ — 符號執行
+- [x] symbolic_execution.py + symbolic_execution.md — 符號執行引擎（路徑爆炸、約束求解）
+
+#### abstract/ — 抽象解釋
+- [x] abstract_interp.py + abstract_interp.md — 抽象解釋框架（抽象域、轉遞函數）
+
+#### contract/ — 契約式設計
+- [x] design_by_contract.py + design_by_contract.md — 契約式設計（前置條件、後置條件、不變量）
+
+## 開發順序
+
+### 第一至六階段 (v1.0-v2.0): 已完成 ✓
+
+| 階段 | 領域 | 完成狀態 |
+|---|---|---|
+| 第一階段 | 計算理論 | ✓ 已完成 |
+| 第二階段 | 演算法 | ✓ 已完成 |
+| 第三階段 | 人工智慧 | ✓ 已完成 |
+| 第四階段 | 程式語言 | ✓ 已完成 |
+| 第五階段 | 密碼學 | ✓ 已完成 |
+| 第六階段 | 資料結構 | ✓ 已完成 |
+
+### 第七至十一階段 (v3.0): 已完成 ✓
+
+| 階段 | 領域 | 完成狀態 |
+|---|---|---|
+| 第七階段 | 資料壓縮 | ✓ 已完成 |
+| 第八階段 | 數值方法 | ✓ 已完成 |
+| 第九階段 | 計算幾何 | ✓ 已完成 |
+| 第十階段 | 資訊檢索 | ✓ 已完成 |
+| 第十一階段 | 機率演算法 | ✓ 已完成 |
+
+### 第十二至十七階段 (v4.0): 已完成 ✓
+
+| 階段 | 領域 | 完成狀態 |
+|---|---|---|
+| 第十二階段 | 電腦圖學 | ✓ 已完成 |
+| 第十三階段 | 區塊鏈 | ✓ 已完成 |
+| 第十四階段 | 量子計算 | ✓ 已完成 |
+| 第十五階段 | 資訊理論 | ✓ 已完成 |
+| 第十六階段 | 分散式演算法 | ✓ 已完成 |
+| 第十七階段 | 形式方法 | ✓ 已完成 |
+
+### 擴充項目 (v4.0): 已完成 ✓
+
+| 領域 | 擴充項目 |
+|---|---|
+| 人工智慧/ | reinforcement/ (4), generative/ (4) |
+| 演算法/ | flow/ (3) |
+| 數值方法/ | advanced/ (3) |
+
+---
+
+## v4.0 完成總結
+
+### 新增領域（6 個）
+| 領域 | 子目錄數 | .py/.md 對數 |
+|---|---|---|
+| 電腦圖學 | 5 | 11 |
+| 區塊鏈 | 4 | 11 |
+| 量子計算 | 3 | 10 |
+| 資訊理論 | 4 | 9 |
+| 分散式演算法 | 5 | 9 |
+| 形式方法 | 5 | 11 |
+
+### 擴充項目（v4.0）
+| 領域 | 項目 |
+|---|---|
+| 人工智慧/reinforcement/ | policy_gradient, actor_critic, dqn, ddpg (4) |
+| 人工智慧/generative/ | autoencoder, vae, gan, diffusion (4) |
+| 演算法/flow/ | push_relabel, hungarian, min_mean_cycle (3) |
+| 數值方法/advanced/ | finite_difference, finite_element, fft_advanced (3) |
+
+### v4.0 統計
+| 項目 | 數量 |
+|---|---|
+| 新增 .py 檔案 | 71 個 |
+| 新增 .md 檔案 | 71 個 |
+| 新增領域數 | 6 個 |
+| 新增子目錄數 | 26 個 |
+
+### 總計（v1.0 + v2.0 + v3.0 + v4.0）
+
+| 領域 | .py/.md 對數 |
+|---|---|
+| 計算理論 | 17 |
+| 演算法 | 40 |
+| 人工智慧 | 33 |
+| 密碼學 | 9 |
+| 資料結構 | 7 |
+| 程式語言 | 4 |
+| 資料壓縮 | 10 |
+| 數值方法 | 16 |
+| 計算幾何 | 11 |
+| 資訊檢索 | 10 |
+| 機率演算法 | 11 |
+| 電腦圖學 | 11 |
+| 區塊鏈 | 11 |
+| 量子計算 | 10 |
+| 資訊理論 | 9 |
+| 分散式演算法 | 9 |
+| 形式方法 | 11 |
+| **總計** | **229 個** |
+
+### 頂層領域（17 個）
+計算理論、演算法、人工智慧、密碼學、資料結構、程式語言、資料壓縮、數值方法、計算幾何、資訊檢索、機率演算法、電腦圖學、區塊鏈、量子計算、資訊理論、分散式演算法、形式方法
+
+---
+
 ## 開發指引
 
 ### 新增演算法時
@@ -493,26 +731,3 @@ cs4py/
 - 函數/變數命名使用 snake_case 英文
 - 盡量使用純 Python，避免外部依賴
 - 強調教學性和可讀性
-
-## v3.0 完成總結
-
-### 新增領域（5 個）
-| 領域 | 子目錄數 | .py/.md 對數 |
-|---|---|---|
-| 數值方法 | 5 | 13 |
-| 資料壓縮 | 4 | 10 |
-| 計算幾何 | 6 | 11 |
-| 資訊檢索 | 5 | 10 |
-| 機率演算法 | 4 | 11 |
-
-### 擴充項目
-| 領域 | 項目 |
-|---|---|
-| 演算法/graph/ | min_cost_flow, matching, planar, graph_coloring |
-| 演算法/ | approximation/ (5), advanced/ (3) |
-| 人工智慧/ | recommendation/ (5), nlp/ (7) |
-
-### 總計
-- v3.0 新增 .py 檔案：79 個
-- v3.0 新增 .md 檔案：79 個
-- 所有 .py 與 .md 均一一對應，無遺漏
