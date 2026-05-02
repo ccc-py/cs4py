@@ -17,7 +17,9 @@ cs4py/
 │   │   ├── ml/           # 機器學習
 │   │   ├── nn/           # 深度學習
 │   │   ├── evolution/    # 演化計算
-│   │   └── agent/        # AI Agent
+│   │   ├── agent/        # AI Agent
+│   │   ├── recommendation/ # 推薦系統
+│   │   └── nlp/          # 自然語言處理
 │   ├── 演算法/
 │   │   ├── graph/        # 圖論演算法
 │   │   ├── sort/         # 排序演算法
@@ -49,6 +51,24 @@ cs4py/
 │       ├── forth/        # FORTH 解譯器
 │       ├── calc/         # 計算機語言
 │       └── vm/           # 簡單虛擬機器
+├── 資料壓縮/
+│   ├── entropy/      # 熵編碼
+│   ├── dictionary/   # 字典式壓縮
+│   ├── transform/    # 轉換編碼
+│   └── image/        # 圖片壓縮
+├── 數值方法/
+│   ├── root_finding/    # 求根方法
+│   ├── linear/         # 線性代數方法
+│   ├── integration/    # 數值積分
+│   ├── interpolation/  # 插值方法
+│   └── ode/           # 常微分方程
+├── 計算幾何/
+│   ├── basic/         # 基礎點線運算
+│   ├── convex_hull/   # 凸包算法
+│   ├── closest_pair/  # 最近點對
+│   ├── polygon/       # 多邊形操作
+│   ├── sweep_line/    # 掃描線算法
+│   └── triangulation/ # 三角化
 └── wiki/                  # Wiki 文章
 ```
 
@@ -136,6 +156,10 @@ cs4py/
 - [x] strongly_connected.py + strongly_connected.md
 - [x] max_flow.py + max_flow.md
 - [x] eulerian.py + eulerian.md
+- [x] min_cost_flow.py + min_cost_flow.md
+- [x] matching.py + matching.md
+- [x] planar.py + planar.md
+- [x] graph_coloring.py + graph_coloring.md
 
 #### sort/
 - [x] merge_sort.py + merge_sort.md
@@ -179,6 +203,18 @@ cs4py/
 - [x] miller_rabin
 - [x] chinese_remainder
 
+#### approximation/
+- [x] vertex_cover.py + vertex_cover.md
+- [x] tsp.py + tsp.md
+- [x] set_cover.py + set_cover.md
+- [x] knapsack.py + knapsack.md
+- [x] max_cut.py + max_cut.md
+
+#### advanced/
+- [x] treap.py + treap.md
+- [x] splay_tree.py + splay_tree.md
+- [x] suffix_tree.py + suffix_tree.md
+
 ### 人工智慧 - 程式碼 (code/人工智慧/) — 已完成
 
 #### search/
@@ -215,6 +251,22 @@ cs4py/
 - [x] q_learning.py + q_learning.md
 - [x] sarsa.py + sarsa.md
 - [x] bdi_agent.py + bdi_agent.md
+
+#### recommendation/
+- [x] collaborative_filtering.py + collaborative_filtering.md
+- [x] matrix_factorization.py + matrix_factorization.md
+- [x] content_based.py + content_based.md
+- [x] association_rules.py + association_rules.md
+- [x] evaluation.py + evaluation.md
+
+#### nlp/
+- [x] attention.py + attention.md
+- [x] bleu.py + bleu.md
+- [x] rnn_nlp.py + rnn_nlp.md
+- [x] word2vec.py + word2vec.md
+- [x] naive_bayes_text.py + naive_bayes_text.md
+- [x] ngram.py + ngram.md
+- [x] viterbi.py + viterbi.md
 
 ### 密碼學 - 程式碼 (code/密碼學/) — 已完成
 
@@ -272,6 +324,78 @@ cs4py/
 #### vm/
 - [x] simple_vm.py + simple_vm.md
 
+### 數值方法 - 程式碼 (code/數值方法/) — 已完成 (v3.0)
+
+#### root_finding/
+- [x] bisection.py + bisection.md
+- [x] newton.py + newton.md
+- [x] secant.py + secant.md
+
+#### linear/
+- [x] gaussian_elimination.py + gaussian_elimination.md
+- [x] lu_decomposition.py + lu_decomposition.md
+- [x] jacobi_iteration.py + jacobi_iteration.md
+
+#### integration/
+- [x] trapezoidal.py + trapezoidal.md
+- [x] simpson.py + simpson.md
+- [x] monte_carlo.py + monte_carlo.md
+
+#### interpolation/
+- [x] lagrange.py + lagrange.md
+- [x] spline.py + spline.md
+
+#### ode/
+- [x] euler.py + euler.md
+- [x] runge_kutta.py + runge_kutta.md
+
+### 計算幾何 - 程式碼 (code/計算幾何/) — 已完成 (v3.0)
+
+#### basic/
+- [x] point.py + point.md
+- [x] line.py + line.md
+
+#### convex_hull/
+- [x] graham_scan.py + graham_scan.md
+- [x] jarvis_march.py + jarvis_march.md
+- [x] quickhull.py + quickhull.md
+
+#### closest_pair/
+- [x] closest_pair.py + closest_pair.md
+
+#### polygon/
+- [x] point_in_polygon.py + point_in_polygon.md
+- [x] polygon_area.py + polygon_area.md
+- [x] triangulation.py + triangulation.md
+
+#### sweep_line/
+- [x] line_sweep.py + line_sweep.md
+
+#### triangulation/
+- [x] delaunay.py + delaunay.md
+
+### 資訊檢索 - 程式碼 (code/資訊檢索/) — 已完成 (v3.0)
+
+#### indexing/
+- [x] inverted_index.py + inverted_index.md
+- [x] suffix_array.py + suffix_array.md
+
+#### ranking/
+- [x] tfidf.py + tfidf.md
+- [x] pagerank.py + pagerank.md
+- [x] bm25.py + bm25.md
+
+#### model/
+- [x] vector_space.py + vector_space.md
+- [x] boolean_retrieval.py + boolean_retrieval.md
+- [x] lsi.py + lsi.md
+
+#### evaluation/
+- [x] metrics.py + metrics.md
+
+#### text/
+- [x] tokenizer.py + tokenizer.md
+
 ### 計算理論 - Wiki 文章 (wiki/計算理論/)
 
 - [x] 哥德爾不完備定理.md
@@ -285,9 +409,11 @@ cs4py/
 
 ### 第二階段：演算法 (已完成) ✓
 - graph/、sort/、dp/、method/、string/、math/
+- 擴充：graph/ (min_cost_flow, matching, planar, graph_coloring)、approximation/、advanced/
 
 ### 第三階段：人工智慧 (已完成) ✓
 - search/、game/、ml/、nn/、evolution/、agent/
+- 擴充：recommendation/、nlp/
 
 ### 第四階段：程式語言 (已完成) ✓
 
@@ -296,6 +422,62 @@ cs4py/
 
 ### 第六階段：資料結構 (v2.0) (已完成) ✓
 - linked_list/ → tree/ → hash_table/ → heap/ → union_find/
+
+### 第七階段：資料壓縮 (v3.0) (已完成) ✓
+- entropy/ → dictionary/ → transform/ → image/
+
+### 第八階段：數值方法 (v3.0) (已完成) ✓
+- root_finding/ → linear/ → integration/ → interpolation/ → ode/
+
+### 第九階段：計算幾何 (v3.0) (已完成) ✓
+- basic/ → convex_hull/ → closest_pair/ → polygon/ → sweep_line/ → triangulation/
+
+### 第十階段：資訊檢索 (v3.0) (已完成) ✓
+- indexing/ → ranking/ → model/ → evaluation/ → text/
+
+### 第十一階段：機率演算法 (v3.0) (已完成) ✓
+- monte_carlo/ → randomized/ → probabilistic_ds/ → markov/
+
+## 資料壓縮 - 程式碼 (code/資料壓縮/) — 已完成 (v3.0)
+
+### entropy/
+- [x] huffman.py + huffman.md
+- [x] shannon_fano.py + shannon_fano.md
+- [x] arithmetic_coding.py + arithmetic_coding.md
+
+### dictionary/
+- [x] lz77.py + lz77.md
+- [x] lzw.py + lzw.md
+- [x] lz78.py + lz78.md
+
+### transform/
+- [x] run_length.py + run_length.md
+- [x] burrows_wheeler.py + burrows_wheeler.md
+- [x] move_to_front.py + move_to_front.md
+
+### image/
+- [x] dct.py + dct.md
+
+### 機率演算法 - 程式碼 (code/機率演算法/) — 已完成 (v3.0)
+
+#### monte_carlo/
+- [x] integration.py + integration.md
+- [x] pi_estimation.py + pi_estimation.md
+- [x] sampling.py + sampling.md
+
+#### randomized/
+- [x] quickselect.py + quickselect.md
+- [x] skip_list.py + skip_list.md
+
+#### probabilistic_ds/
+- [x] bloom_filter.py + bloom_filter.md
+- [x] hyperloglog.py + hyperloglog.md
+- [x] count_min_sketch.py + count_min_sketch.md
+- [x] min_hash.py + min_hash.md
+
+#### markov/
+- [x] markov_chain.py + markov_chain.md
+- [x] mcmc.py + mcmc.md
 
 ## 開發指引
 
@@ -311,3 +493,26 @@ cs4py/
 - 函數/變數命名使用 snake_case 英文
 - 盡量使用純 Python，避免外部依賴
 - 強調教學性和可讀性
+
+## v3.0 完成總結
+
+### 新增領域（5 個）
+| 領域 | 子目錄數 | .py/.md 對數 |
+|---|---|---|
+| 數值方法 | 5 | 13 |
+| 資料壓縮 | 4 | 10 |
+| 計算幾何 | 6 | 11 |
+| 資訊檢索 | 5 | 10 |
+| 機率演算法 | 4 | 11 |
+
+### 擴充項目
+| 領域 | 項目 |
+|---|---|
+| 演算法/graph/ | min_cost_flow, matching, planar, graph_coloring |
+| 演算法/ | approximation/ (5), advanced/ (3) |
+| 人工智慧/ | recommendation/ (5), nlp/ (7) |
+
+### 總計
+- v3.0 新增 .py 檔案：79 個
+- v3.0 新增 .md 檔案：79 個
+- 所有 .py 與 .md 均一一對應，無遺漏
